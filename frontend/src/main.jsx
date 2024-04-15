@@ -11,8 +11,10 @@ import { createBrowserRouter } from "react-router-dom";
 // Restricted
 import Login from "./pages/auth/Login.jsx";
 import Register from "./pages/auth/Register.jsx";
+import PrivateRoute from "./pages/auth/PrivateRoute.jsx";
 
 import Home from "./pages/Home.jsx";
+import Profile from "./pages/user/Profile.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +22,9 @@ const router = createBrowserRouter(
       <Route index={true} path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="" element={<PrivateRoute />}>
+        <Route path="/profile" element={<Profile />} />
+      </Route>
     </Route>
   )
 );
