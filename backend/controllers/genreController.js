@@ -9,9 +9,9 @@ const createGenre = asyncHandler(async (req, res) => {
       return res.status(400).json({ error: "Name is required" });
     }
 
-    const existingGernre = await Genre.findOne({ name });
+    const existingGenre = await Genre.findOne({ name });
 
-    if (existingGernre) {
+    if (existingGenre) {
       return res.status(400).json({ error: "Genre already exists" });
     }
 
@@ -74,7 +74,7 @@ const listGenres = asyncHandler(async (req, res) => {
 
 const readGenre = asyncHandler(async (req, res) => {
   try {
-    const genre = await Genre.findById({ _id: req.params.id });
+    const genre = await Genre.findOne({ _id: req.params.id });
     res.json(genre);
   } catch (error) {
     console.log(error);

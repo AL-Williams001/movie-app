@@ -1,7 +1,5 @@
 import { apiSlice } from "./apiSlice";
 import { USERS_URL } from "../constants";
-import { logout } from "../features/auth/authSlice";
-import Profile from "../../pages/user/Profile";
 
 export const userApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
