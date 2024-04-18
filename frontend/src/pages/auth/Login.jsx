@@ -41,13 +41,13 @@ const Login = () => {
 
   return (
     <div>
-      <section className="pl-[10rem]  flex flex-wrap">
+      <section className="pl-[10rem] flex flex-wrap">
         <div className="mr-[4rem] mt-[5rem]">
-          <h1 className="text-3xl font-semibodl mb-4">Sign In</h1>
+          <h1 className="text-3xl font-semibold mb-4">Sign In</h1>
 
           <form onSubmit={submitHandler} className="container w-[40rem]">
             <div className="my-[2rem]">
-              <label htmlFor="email" className="block text-sm font-medium ">
+              <label htmlFor="email" className="block text-sm font-medium">
                 Email Address
               </label>
               <input
@@ -58,11 +58,12 @@ const Login = () => {
                 placeholder="Enter Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email"
               />
             </div>
 
             <div className="my-[2rem]">
-              <label htmlFor="password" className="block text-sm font-medium ">
+              <label htmlFor="password" className="block text-sm font-medium">
                 Password
               </label>
               <input
@@ -73,13 +74,14 @@ const Login = () => {
                 placeholder="Enter Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                autoComplete="current-password"
               />
             </div>
 
             <button
               disabled={isLoading}
               type="submit"
-              className="bg-teal-500 px-4 py- rounded cursor-pointer my-[1rem]"
+              className="bg-teal-500 px-4 py-2 rounded cursor-pointer my-[1rem]"
             >
               {isLoading ? "Signing In ..." : "Sign In"}
             </button>
@@ -87,7 +89,7 @@ const Login = () => {
           </form>
           <div className="mt-4">
             <p>
-              Don't have an account?
+              Don't have an account?{" "}
               <Link
                 to={redirect ? `/register?redirect=${redirect}` : "/register"}
                 className="text-teal-500 hover:underline"

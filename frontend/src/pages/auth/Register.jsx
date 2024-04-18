@@ -78,6 +78,7 @@ const Register = () => {
               placeholder="Enter Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              autoComplete="email"
             />
           </div>
           <div className="my-[2rem]">
@@ -92,6 +93,7 @@ const Register = () => {
               placeholder="Enter Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              autoComplete="new-password"
             />
           </div>
           <div className="my-[2rem]">
@@ -109,15 +111,15 @@ const Register = () => {
               placeholder="Confirm your Password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
+              autoComplete="new-password"
             />
           </div>
 
           <button
             disabled={isLoading}
             type="submit"
-            className="bg-teal-500 px-4 py- rounded cursor-pointer my-[1rem]"
+            className="bg-teal-500 px-4 py-2 rounded cursor-pointer my-[1rem]"
           >
-            {" "}
             {isLoading ? "Registering..." : "Register"}
           </button>
 

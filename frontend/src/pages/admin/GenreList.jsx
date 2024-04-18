@@ -7,6 +7,7 @@ import {
 } from "../../redux/api/genre";
 
 import { toast } from "react-toastify";
+import GenreForm from "../../component/GenreForm";
 
 const GenreList = () => {
   const { data: genres, refetch } = useFetchGenresQuery();
@@ -23,6 +24,11 @@ const GenreList = () => {
     <div className="ml-[10rem] flex flex-col md:flex-row">
       <div className="md:w-3/4 p-3">
         <h1 className="h-15">Manage Genres</h1>
+        <GenreForm
+          value={name}
+          setValue={setName}
+          handleSubmit={handleCreateGenre}
+        />
       </div>
     </div>
   );
