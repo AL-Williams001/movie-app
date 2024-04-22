@@ -30,4 +30,7 @@ app.use("/api/genre", genreRoutes);
 app.use("/api/movies", movieRoutes);
 app.use("/api/upload", uploadRoutes);
 
+const __dirname = path.resolve();
+app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
+
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
