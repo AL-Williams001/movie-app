@@ -5,6 +5,7 @@ import { store } from "./redux/store.js";
 import { Provider } from "react-redux";
 import { Route, RouterProvider, createRoutesFromElements } from "react-router";
 import { createBrowserRouter } from "react-router-dom";
+import { jsx as _jsx } from "jsx-dom";
 
 // Auth
 import AdminRoute from "./pages/admin/AdminRoute.jsx";
