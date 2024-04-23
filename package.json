@@ -29,6 +29,7 @@
     "parser": "^0.1.4"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
     "vite": "^5.2.10"
   }
 }
