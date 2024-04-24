@@ -23,7 +23,7 @@ const MoviesContainerPage = () => {
         {genres?.map((g) => (
           <button
             key={g._id}
-            className={`transition duration-300 ease-in-out hover:bg-gray-200 block p-2 rounded mb-[1rem] text-lg ${
+            className={`transition duration-300 ease-in-out hover:bg-teal-200 block p-2 rounded mb-[1rem] text-lg ${
               selectedGenre === g._id ? "bg-gray-200" : ""
             }`}
             onClick={() => handleGenreClick(g._id)}

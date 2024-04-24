@@ -40,7 +40,7 @@ const MovieDetails = () => {
       <div>
         <Link
           to="/"
-          className="text-white font-semibold hover:underline ml-[20rem]"
+          className="text-black font-semibold hover:underline ml-[20rem]"
         >
           Go Back
         </Link>
