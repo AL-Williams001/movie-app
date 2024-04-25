@@ -8,8 +8,10 @@ export default defineConfig({
 
   server: {
     proxy: {
-      "/api/": "https://movie-app-one-hazel.vercel.app",
-      "/uploads/": "https://movie-app-one-hazel.vercel.app",
+      "/api/":
+        "https://https://movie-an23dk0r5-al-williams-s-projects.vercel.app/",
+      "/uploads/":
+        "https://https://movie-an23dk0r5-al-williams-s-projects.vercel.app/",
     },
   },
 
