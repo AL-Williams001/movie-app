@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://movie-app-one-hazel.vercel.app"
+      "destination": "https://movie-osgmxwzls-al-williams-s-projects.vercel.app"
     },
     {
       "source": "/(.*)",
