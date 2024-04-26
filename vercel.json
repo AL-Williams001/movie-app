@@ -1,8 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "^/api/(.*)", // Use ^ for exact path match
+      "source": "/api/(.*)",
       "destination": "https://movie-app-roan-zeta.vercel.app/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
