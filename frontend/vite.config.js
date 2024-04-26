@@ -1,5 +1,3 @@
-// vite.config.js
-
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
@@ -8,12 +6,12 @@ export default defineConfig({
 
   server: {
     proxy: {
-      "/api/": "http://localhost:3000",
-      "/uploads/": "http://localhost:3000",
+      "/api/": "https://movie-app-roan-zeta.vercel.app",
+      "/uploads/": "https://movie-app-roan-zeta.vercel.app",
     },
   },
 
   build: {
-    outDir: "build", // Specify the output directory here
+    outDir: "build",
   },
 });

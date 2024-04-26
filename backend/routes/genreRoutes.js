@@ -14,10 +14,18 @@ import {
 // Middlewares
 
 import { authenticate, authorizeAdmin } from "../middlewares/authMiddleware.js";
-router.route("/").post(authenticate, authorizeAdmin, createGenre);
-router.route("/:id").put(authenticate, authorizeAdmin, updateGenre);
-router.route("/:id").delete(authenticate, authorizeAdmin, removeGenre);
-router.route("/allgenres").get(listGenres);
-router.route("/:id").get(readGenre);
+router
+  .route("https://movie-app-roan-zeta.vercel.app/")
+  .post(authenticate, authorizeAdmin, createGenre);
+router
+  .route("https://movie-app-roan-zeta.vercel.app/:id")
+  .put(authenticate, authorizeAdmin, updateGenre);
+router
+  .route("https://movie-app-roan-zeta.vercel.app/:id")
+  .delete(authenticate, authorizeAdmin, removeGenre);
+router
+  .route("https://movie-app-roan-zeta.vercel.app/allgenres")
+  .get(listGenres);
+router.route("https://movie-app-roan-zeta.vercel.app/:id").get(readGenre);
 
 export default router;
