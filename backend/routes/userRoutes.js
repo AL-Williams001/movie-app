@@ -17,16 +17,16 @@ import { authenticate, authorizeAdmin } from "../middlewares/authMiddleware.js";
 const router = express.Router();
 
 router
-  .route("https://movie-app-roan-zeta.vercel.app/")
+  .route("/")
   .post(createUser)
   .get(authenticate, authorizeAdmin, getAllUsers);
 
-router.post("https://movie-app-roan-zeta.vercel.app/auth", loginUser);
+router.post("/auth", loginUser);
 
-router.post("https://movie-app-roan-zeta.vercel.app/logout", logoutCurrentUser);
+router.post("/logout", logoutCurrentUser);
 
 router
-  .route("https://movie-app-roan-zeta.vercel.app/profile")
+  .route("/profile")
   .get(authenticate, getCurrentUserProfile)
   .put(authenticate, updateCurrnetUserProfile);
 

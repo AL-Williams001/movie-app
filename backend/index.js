@@ -25,17 +25,12 @@ app.use(cookieParser());
 const PORT = process.env.PORT || 3000;
 
 // Routes
-app.use("https://movie-app-roan-zeta.vercel.app/api/users", userRoutes);
-app.use("https://movie-app-roan-zeta.vercel.app/api/genre", genreRoutes);
-app.use("https://movie-app-roan-zeta.vercel.app/api/movies", movieRoutes);
-app.use("https://movie-app-roan-zeta.vercel.app/api/upload", uploadRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/genre", genreRoutes);
+app.use("/api/movies", movieRoutes);
+app.use("/api/upload", uploadRoutes);
 
 const __dirname = path.resolve();
-app.use(
-  "https://movie-app-roan-zeta.vercel.app/api/upload",
-  express.static(
-    path.join(__dirname, "https://movie-app-roan-zeta.vercel.app/api/upload")
-  )
-);
+app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
